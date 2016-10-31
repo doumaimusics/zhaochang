@@ -1,0 +1,166 @@
+* {
+  text-decoration: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+@mixin user ($size) {
+  $list: 800px,414px,412px,384px,375px,360px,320px;
+  @each $i in $list {
+     @media screen and (max-width: #{$i}){
+      html {
+        font-size: 100px * ( $i / $size);
+      }
+    }
+  }
+}
+body {
+  font-size: 16px;
+}
+@include user(750px);
+.all {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #f7f7f7;
+  .suc {
+    width: 7rem;
+    height: 9.8rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.56rem;
+    margin: auto;
+    background: url('../img/组-1.png')no-repeat;
+    background-size: 100%;
+  }
+  .copy {
+    width: 100%;
+    height: 0.22rem;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0.23rem;
+    margin: auto;
+    font-size: 0.24rem;
+    text-align: center;
+    color: #b7c4c5;
+  }
+  .imgs1 {
+    width: 5.16rem;
+    height: 1.25rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 1.84rem;
+    background: url("../img/矢量智能对象.png") no-repeat;
+    background-size: 100%;
+  }
+  .imgs2 {
+    width: 0.91rem;
+    height: 0.79rem;
+    position: absolute;
+    top: 3.25rem;
+    right: 0.8rem;
+    margin: auto;
+    background: url('../img/感叹.png')no-repeat;
+    background-size: 100%;
+  }
+  .bun {
+    width: 4.23rem;
+    height: 0.67rem;
+    background: #fff;
+    border-radius: 100px;
+    position: absolute;
+    left: 1rem;
+    top: 3.32rem;
+    .duihuanquan {
+      width: 1.8rem;
+      height: 100%;
+      font-size: 0.26rem;
+      float: left;
+      margin-left: 10px;
+      line-height: 0.67rem;
+      color: #2f3167;
+    }
+    .quan {
+      width: 1.40rem;
+      height: 100%;
+      float: left;
+      border: none;
+      display: block;
+      margin-left: 5px;
+      line-height: 0.67rem;
+      color: #2f3167;
+      font-size: 0.26rem;
+      background: #fff;
+      border-radius: 10px;
+    }
+  }
+  .fuzhi {
+    width: auto;
+    height: 0.5rem;
+    border-radius: 15px;
+    line-height: 0.7rem;
+    font-size: 0.20rem;
+    text-align: center;
+    position: absolute;
+    left: 2.2rem;
+    top: 3.9rem;
+    color: #fff;
+  }
+  .explain {
+    width: 5.85rem;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5.2rem;
+    margin: auto;
+    span {
+      color: #fff;
+      font-size: 0.24rem;
+    }
+    li {
+      margin-left: 18px;
+      box-sizing: border-box;
+      font-size: 0.24rem;
+      margin-top: 2px;
+    }
+  }
+  .duihuan {
+    width: 3.2rem;
+    height: 0.82rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0.48rem;
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 0.82rem;
+    font-size: 0.32rem;
+    border: 1px solid #444;
+    a {
+      display: block;
+      color: #2f3167;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
